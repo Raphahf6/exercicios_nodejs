@@ -5,7 +5,7 @@ let ls = require("readline-sync")
 
 // ## Faça o código ##
 
-let dia = ls.question('Por favor informe a data do seu aniversario no formato exemplo: 01   ')
+let dia = ls.question('Por favor informe o dia do seu aniversario no formato exemplo: 01   ')
 let mes = ls.question('Por favor digite o mes do seu aniversario. exemplo: 06   ')
 let day = dia
 let month = mes
@@ -41,9 +41,10 @@ if (month < 1 || month > 12){
 
     }
 
+
   else if ((month == 5 && day < 21) || (month == 4 && day >= 23))
 
-    {  console.log('Peixes')
+    {  console.log('Touro')
 
     }
 
