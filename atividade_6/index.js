@@ -8,14 +8,13 @@ let ls = require("readline-sync")
  let name1 = ls.question('Digite o seu nome ')
  let name2 = ls.question('Digite o nome do segundo participante ')
  console.log('Obrigado ! vamos para a proxima fase')
- let inputUser1 = ls.question(name1 + ' Digite qualquer coisa')
- let inputUser2 = ls.question(name2 + ' Agora por favor segundo participante digite qualquer coisa')
- let lenght1 = inputUser1.length
- let lenght2 = inputUser2.length
+ let user1 = ls.question(name1 + ' Digite qualquer coisa')
+ let user2 = ls.question(name2 + ' Agora por favor segundo participante digite qualquer coisa')
  
-if(lenght1 > lenght2){
-    console.log('O participante ' + name1 + ' Digitou mais caracteres')
-} else if (lenght1 < lenght2){
-    console.log('O participante ' + name2 + ' Digitou mais caracteres')
 
+ 
+if(user1.length > user2.length){
+    console.log('O participante ' + name1 + ' Digitou mais caracteres')
+} else if (user2.length > user1.length){
+    console.log('O participante ' + name2 + ' Digitou mais caracteres')
 }
