@@ -10,6 +10,9 @@ let ls = require("readline-sync")
  console.log('Obrigado ! vamos para a proxima fase')
  let user1 = ls.question(name1 + ' Digite qualquer coisa')
  let user2 = ls.question(name2 + ' Agora por favor segundo participante digite qualquer coisa')
+ console.log(name1 + ' você digitou ' + user1.length + ' caracteres!')
+ console.log(name2 + ' você digitou ' + user2.length + ' caracteres!')
+
  
 
  
