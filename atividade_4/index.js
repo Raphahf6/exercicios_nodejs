@@ -5,91 +5,49 @@ let ls = require("readline-sync")
 
 // ## Faça o código ##
 
-let dia = ls.question('Por favor informe o dia do seu aniversario no formato exemplo: 01   ')
-let mes = ls.question('Por favor digite o mes do seu aniversario. exemplo: 06   ')
-let day = dia
-let month = mes
+let dia = ls.questionInt('Por favor informe o dia do seu aniversario no formato exemplo: 01   ')
+let mes = ls.questionInt('Por favor digite o mes do seu aniversario. exemplo: 06   ')
 
-if (month < 1 || month > 12){
-    console.log('mês invalido')
+switch(mes){
+  case mes > 12 && mes < 0:
+    console.log('digite dados validos!')
+    break
+  case 1:
+    dia <=20 ? console.log('capricornio') : console.log('aquario')
+    break
+  case 2:
+    dia >= 19 ? console.log('Peixes') : console.log('aquario')
+    break
+  case 3:
+    dia >= 21 ? console.log ('aries') : console.log('Peixes')
+    break
+  case 4:
+    dia <= 21 ? console.log('Touro') : console.log('aries')
+    break
+  case 5:
+     dia >= 21 ? console.log('gemeos') : console.log('touro')
+     break
+  case 6:
+    dia >= 21 ? console.log('Cancer') : console.log('gemeos')
+    break
+  case 7:
+    dia >= 23 ? console.log('leao') : console.log('cancer')
+    break
+  case 8:
+    dia >= 23 ? console.log('virgem') : console.log('leao')
+    break
+  case 9:
+    dia >= 23 ? console.log('libra') : console.log('virgem')
+    break
+  case 10:
+    dia >= 23 ? console.log('escorpiao') : console.log('libra')
+    break
+  case 11:
+    dia >= 22 ? console.log('sagitario') : console.log('escorpiao')
+    break
+  case 12:
+    dia >= 22 ? console.log('capricornio') : console.log('sagitario')
 }
-
-  else if (day < 1 || day > 32){
-      console.log('dia invalido')
-  }
-
-  else if ((month == 1 && day < 20) || (month == 12 && day >= 22))
-
-    {  console.log('Capricornio')
-
-    }
-
-  else if ((month == 2 && day < 19) || (month == 1 && day >= 22))
-
-    {  console.log('Aquario')
-    }
-
-  else if ((month == 3 && day < 21) || (month == 2 && day >= 24))
-
-    {  console.log('Peixes')
-
-    }
-
-  else if ((month == 4 && day < 20) || (month == 3 && day >= 23))
-
-    {  console.log('Aries')
-
-    }
-
-
-  else if ((month == 5 && day < 21) || (month == 4 && day >= 23))
-
-    {  console.log('Touro')
-
-    }
-
-  else if ((month == 6 && day < 22) || (month == 5 && day >= 23))
-
-    {  console.log('Gemeos')
-
-    }
-
-  else if ((month == 7 && day < 23) || (month == 6 && day >= 22))
-
-    {  console.log('Cancer')
-
-    }
-
-  else if ((month == 8 && day < 23) || (month == 7 && day >= 21))
-
-    {  console.log('Leao')
-
-    }
-
-  else if ((month == 9 && day < 23) || (month == 8 && day >= 20))
-
-    {  console.log ('Virgem')
-
-    }
-
-  else if ((month == 10 && day < 24) || (month == 9 && day >= 21))
-
-    {  console.log ('Libra')
-
-    }
-
-  else if ((month == 11 && day < 22) || (month == 10 && day >= 19))
-
-    {  console.log('Escorpião')
-
-    }
-
-  else if ((month == 12 && day < 22) || (month == 11 && day >= 20))
-
-    {  console.log('Sagitario')
-
-  }
-
 
 
 //Áries: de 21 março a 20 abril
