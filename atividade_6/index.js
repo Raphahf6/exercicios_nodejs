@@ -12,12 +12,13 @@ let ls = require("readline-sync")
  let user2 = ls.question(name2 + ' Agora por favor segundo participante digite qualquer coisa')
  console.log(name1 + ' você digitou ' + user1.length + ' caracteres!')
  console.log(name2 + ' você digitou ' + user2.length + ' caracteres!')
+ let vencedor = user1.length > user2.length // inicializa a variavel se o primeiro participante digitou mais caracteres que o participante 2
 
- 
-
- 
-if(user1.length > user2.length){
-    console.log('O participante ' + name1 + ' Digitou mais caracteres')
-} else if (user2.length > user1.length){
-    console.log('O participante ' + name2 + ' Digitou mais caracteres')
+switch(vencedor){
+    case true:
+        console.log('Parabens ' + name1 + ' você ganhou')
+    break
+    case false:
+        console.log(name2 + ' ganhou')
+        break
 }
